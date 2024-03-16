@@ -9,7 +9,7 @@ The `sqlite3` cli that comes with SQLite will load both kinds of empty cell as s
 
 ## Setup
 
-0. Download `big.csv.zip` from Github releases and unzip it somewhere.
+0. Download the compressed `big.csv` from Github releases and it.
 1. Create a database containing the block table: `sqlite3 demo.sqlite < schema.sql`
 2. Run your program to load big.csv into the block table. Note the first row is CSV header and shouldn't be included.
 
@@ -26,3 +26,11 @@ The `sqlite3` cli that comes with SQLite will load both kinds of empty cell as s
    |null
    |null
    ```
+
+## Performance
+
+My current results on a MacBook Pro M1 Max 64gb:
+
+```txt
+2024/03/16 15:27:21 table 'block' file 'big.csv' inserted 10085126 rows in 50.388817041s (50.388817041s)
+```
