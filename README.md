@@ -13,7 +13,7 @@ The `sqlite3` cli that comes with SQLite will load both kinds of empty cell as s
 1. Create a database containing the block table: `sqlite3 demo.sqlite < schema.sql`
 2. Run your program to load big.csv into the block table. Note the first row is CSV header and shouldn't be included.
 
-   Example: `sqlite3 demo.sqlite '.import --csv --skip 1 big.csv block'`
+   Example (will not pass the following check): `sqlite3 demo.sqlite '.import --csv --skip 1 big.csv block'`
 
 3. Check that nulls are handled correctly:
 
