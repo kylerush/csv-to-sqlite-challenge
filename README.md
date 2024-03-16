@@ -13,24 +13,4 @@ The `sqlite3` cli that comes with SQLite will load both kinds of empty cell as s
 1. Create a database containing the block table: `sqlite3 demo.sqlite < schema.sql`
 2. Run your program to load big.csv into the block table. Note the first row is CSV header and shouldn't be included.
 
-   Example (will not pass the following check): `sqlite3 demo.sqlite '.import --csv --skip 1 big.csv block'`
-
-3. Check that nulls are handled correctly:
-
-   `sqlite3 demo.sqlite 'select typeof(last_version) from block'`. It must always be `integer` or `null`, it must never be `text`.
-
-   ```text
-   |null
-   |null
-   |null
-   |null
-   |null
-   ```
-
-## Performance
-
-My current results on a MacBook Pro M1 Max 64gb:
-
-```txt
-2024/03/16 15:27:21 table 'block' file 'big.csv' inserted 10085126 rows in 50.388817041s (50.388817041s)
-```
+   Example (will fail due to null handling): `sqlite3 demo.sqlite '.import --csv --skip 1 big.csv block'`

@@ -28,4 +28,4 @@ CREATE TABLE block (
     content_classification TEXT,
     space_id TEXT NOT NULL,
     moved TEXT
-);
+) STRICT;
