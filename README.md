@@ -9,7 +9,7 @@ The `sqlite3` cli that comes with SQLite will load both kinds of empty cell as s
 
 ## Setup
 
-0. Download the compressed `big.csv` from [Github releases](https://github.com/makenotion/csv-to-sqlite-challenge/releases/tag/v1) and it.
+0. Download the compressed `big.csv` from [Github releases](https://github.com/makenotion/csv-to-sqlite-challenge/releases/tag/v1) and extract it.
 1. Create a database containing the block table: `sqlite3 demo.sqlite < schema.sql`
 2. Run your program to load big.csv into the block table. Note the first row is CSV header and shouldn't be included.
 
