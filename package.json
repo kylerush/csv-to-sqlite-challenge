@@ -1,0 +1,14 @@
+{
+  "name": "csv-to-sqlite-challenge",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "csv-parser": "^3.0.0"
+  }
+}
